@@ -1,10 +1,10 @@
-const codeInput = document.querySelector("#codeInput");
-const previewFrame = document.querySelector("#previewFrame");
+const codeInput = document.querySelector("#editor-input");
+const previewFrame = document.querySelector("#preview-frame");
 
 codeInput.addEventListener("input", function(event) {
-    const code = event.target.value;
+    const editor = event.target.value;
     const codePreview = previewFrame.contentDocument || previewFrame.contentWindow.document;
     codePreview.open();
-    codePreview.write(code);
+    codePreview.write(editor);
     codePreview.close();
 })
