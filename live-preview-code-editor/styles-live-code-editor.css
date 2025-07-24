@@ -18,3 +18,23 @@
     padding: 13px;
     background-color: #2222222e;
 }
+
+.context-menu {
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    background-color: #333;
+    color:#fff;
+    border-radius: 4px;
+    display: none;
+}
+
+.context-menu li {
+    padding: 4px;
+    margin: 3px 0;
+    list-style-type: none;
+}
+
+.context-menu li:hover {
+    cursor: pointer;
+}
