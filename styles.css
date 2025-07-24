@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app-content {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #6b48ff, #00ddeb);
+}
+
+.btn-select {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #ffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-select:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(27, 8, 8, 0.3);
+}
+
+.element {
+    text-decoration: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity, visibility;
+    transition-duration: 0.10s;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay.show .modal {
+    transform: scale(1);
+}
+
+ .modal {
+    position: relative;
+    max-width: 500px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.modal-content {
+    max-height: 60vh;
+    overflow-y: auto; /*tự động thêm thanh cuộn khi content vượt quá kích thước*/
+    line-height: 1.6;
+    color: #444;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+}
+
+.modal-header h3 {
+    color: #444;
+
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-footer {
+    text-align: right;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    background: #6b48ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-footer button:hover {
+    background: #5439cc;
+}
